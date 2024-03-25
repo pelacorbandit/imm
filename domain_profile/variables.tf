@@ -59,11 +59,11 @@ variable "fabric_b_fcoe_vlan" {
 }
 
 variable "fi_serial_number_a" {
- default = [] 
+ type = string 
 }
 
 variable "fi_serial_number_b" {
- default = []  
+ type = string  
 }
 
 variable "assigned_switch_a" {
