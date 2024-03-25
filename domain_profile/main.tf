@@ -19,7 +19,7 @@ resource "intersight_fabric_switch_profile" "fabric_switch_profile-A" {
   dynamic "assigned_switch" {
     for_each = var.assigned_switch_a ? [1] : []
     content {
-      moid        = data.intersight_network_element_summary.fi-a.results[0].moid
+      moid        = data.intersight_network_element_summary.fi-a[0].results[0].moid
       object_type = "network.Element"
     }
   }
@@ -35,7 +35,7 @@ resource "intersight_fabric_switch_profile" "fabric_switch_profile-B" {
   dynamic "assigned_switch" {
     for_each = var.assigned_switch_b ? [1] : []
     content{
-      moid        = data.intersight_network_element_summary.fi-b.results[0].moid
+      moid        = data.intersight_network_element_summary.fi-b[0].results[0].moid
       object_type = "network.Element"
     }
   }
